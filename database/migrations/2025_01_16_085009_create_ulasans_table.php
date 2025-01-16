@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('ulasans', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users');
-            $table->foreignId('buku_id')->constrained('bukus');
+            $table->foreignId('bukuId')->constrained('bukus');
             $table->text('ulasan');
             $table->integer('rating');
         });
