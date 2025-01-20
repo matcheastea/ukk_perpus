@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('pinjams', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users');
-            $table->foreignId('bukuId')->constrained('bukus');
+            $table->foreignId('buku_id')->constrained('bukus');
             $table->date('tgl_pinjam');
             $table->date('tgl_kembali');
             $table->varchar('status')->default(null);
